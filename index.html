@@ -1,0 +1,171 @@
+ <!DOCTYPE html> 
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>2 задание</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="https://kubsu.ru/" target="_blank">Сайт КубГУ</a>
+        <a href="https://github.com/xromza/" target="_blank">Github</a>
+        <a href="#form">Оставить заявку</a>
+      </nav>
+      <img id="logo" src="logo.png" alt="logo">
+      <div id="header-text" >Задание 2</div>
+    </header>
+    <main>
+      <ol>
+        <li><a id="httpkubsu" href="http://kubsu.ru/">КубГУ HTTP</a></li>
+        <li><a href="https://kubsu.ru/">КубГУ HTTPS</a></li>
+        <li><a href="https://example.com/">
+            <img src="image.jpg" width="300" alt="картинка" title="картинка с ссылкой"> 
+        </a></li>
+        <li><a href="./index.html">Ссылка на внутреннюю страницу</a></li>
+        <li><a href="/">Главная страница</a></li>
+        <li><a href="#httpkubsu">Ссылка на фрагмент КубГУ HTTPS</a></li>
+        <li><a href="https://example.com/?param1=1&param2=2&param3=3">Ссылка с тремя параметрами</a></li>
+        <li><a href="https://example.com/?id=1">Ссылка с параметром id</a></li>
+        <li><a href="./example.html">Ссылка на страницу в текущем каталоге</a></li>
+        <li><a href="./about/example.html">Ссылка на страницу в каталоге about</a></li>
+        <li><a href="../example.html">Ссылка на страницу в каталоге на уровень выше</a></li>
+        <li><a href="../../example.html">Ссылка на страницу в каталоге на два уровня выше</a></li>
+        <li><p>lorem ipsum dolor <a href="https://example.com/">ссылка</a> sit amet</p></li>
+        <li><a href="https://kubsu.ru/index.php#region-content" target="_blank">Ссылка на контент на другой странице</a></li>
+        <li>
+          <img src="./image.jpg" usemap="#map" width="300" alt="картинка с кликабельными областями" title="картинка с кликабельными областями">
+          <map name="map">
+            <!-- Прямоугольная ссылка -->
+            <area shape="rect" 
+                  coords="10,10,110,90" 
+                  href="https://google.com" 
+                  alt="Перейти на Google">
+
+            <!-- Круглая ссылка -->
+            <area shape="circle" 
+                  coords="250,175,50" 
+                  href="https://youtube.com" 
+                  alt="Перейти на YouTube">
+          </map>
+        </li>
+        <li><a href="">Ссылка с пустым href</a></li>
+        <li><a>Ссылка без href</a></li>
+        <li><a href="https://example.com" rel="nofollow">Ссылка, по которой не могут переходить поисковики</a></li>
+        <li><!--noindex--><a href="https://example.com">Ссылка, которую не могут индексировать</a><!--/noindex--></li>
+        <li>
+          <ol>
+            <li>
+              <a class="dark_green" title="ссылка1">Первая ссылка</a>
+            </li>
+            <li>
+              <a class="dark_green" title="ссылка2">Вторая ссылка</a>
+            </li>
+            <li>
+              <a class="dark_green" title="ссылка3">Третья ссылка</a>
+            </li>
+          </ol>
+        </li>
+        <li><a href="ftp://login:password@127.0.0.1:21/file.txt">Ссылка на FTP-сервер с авторизацией</a></li>
+        </ol>
+        <h2>Расписание</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Время</th>
+              <th>Понедельник</th>
+              <th>Вторник</th>
+              <th>Среда</th>  
+              <th>Четверг</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>8:00-9:20</td>
+              <td colspan="2">Разработка пользовательского WEB-интерфейса</td>
+              <td>Математический анализ</td>
+              <td rowspan="5">КСРС</td>
+            </tr>
+            <tr>
+              <td>9:30-10:50</td>
+              <td>ООП</td>
+              <td rowspan="2">Компьютерные сети</td>
+              <td>Физическая культура</td>
+            </tr>
+            <tr>
+              <td>11:10-12:30</td>
+              <td>Экономика</td>
+              <td>Иностранный язык</td>
+            </tr>
+            <tr>
+              <td>12:40-14:00</td>
+              <td>Дифференциальные уравнения</td>
+              <td colspan="2" rowspan="2">Математический анализ лекция</td>
+            </tr>
+            <tr>
+              <td>14:10-15:30</td>
+              <td colspan="1">Дополнительое занятие по математическому анализу</td>
+            </tr>
+          </tbody>
+        </table>
+        <hr>
+          <h2>Оставить заявку</h2>
+          <form action="/" method="POST" class="contact-form" id="form">
+            <!--Поле ввода ФИО-->
+            <label for="name">ФИО:</label>
+            <input required type="text" id="name" name="name" placeholder="Введите своё ФИО">
+            <!--Поле ввода номера телефона-->
+            <label for="phone">Телефон:</label>
+            <input required type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67">
+            <!--Поле ввода email-->
+            <label for="email">Email:</label>
+            <input required type="email" id="email" name="email" placeholder="address@example.com">
+            
+            <!--Поле ввода даты рождения-->
+            <label for="birthdate">Дата рождения:</label>
+            <input required type="date" id="birthdate" name="birthdate">
+
+            <!--Выбор пола-->
+            <label>Пол:</label>
+            <div>
+              <label><input required type="radio" name="gender" value="female">Женский</label>
+              <label><input required type="radio" name="gender" value="male">Мужской</label>
+            </div>
+
+            <!--Выбор любимого языка программирования-->
+            <label for="favlang">Любимый язык программирования:</label>
+            <select id="favlang" name="favlang[]" multiple size="6">
+              <option value="pascal">Pascal</option>
+              <option value="c">C</option>
+              <option value="cpp">C++</option>
+              <option value="js">JavaScript</option>
+              <option value="php">PHP</option>
+              <option value="python">Python</option>
+              <option value="haskel">Haskel</option>
+              <option value="clojure">Clojure</option>
+              <option value="prolog">Prolog</option>
+              <option value="scala">Scala</option>
+              <option value="assembly">Assembly</option>
+            </select><br>
+            
+            <!--Многострочное поле ввода-->
+            <label for="bio">Биография:</label>
+            <textarea name="bio" id="bio" rows="10" placeholder="Ваша биография"></textarea>
+
+            <!--Кнопка "с контрактом ознакомлен"-->
+            <label style="margin-top: 1em; margin-bottom: 1em;">С контрактом ознакомлен(-а) <input required type="checkbox" id="contractacceptance" name="contractacceptance"></label>
+            <!--Кнопка отправки-->
+            <button type="submit">Сохранить</button>
+          </form>
+    </main>
+    <footer>
+      <div id="footer-text">
+        made by xromza | 2025
+      </div>
+    </footer>
+  </body>
+</html>
+       
