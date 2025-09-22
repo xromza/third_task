@@ -4,7 +4,8 @@
     --borders: 0.4vh;
     --header-content-height: calc(var(--header-height)*6/7);
     --footer-height: 8vh;
-    --footer-content-height: calc(var(--footer-height)*6/7)
+    --footer-content-height: calc(var(--footer-height)*6/7);
+    --table-borders: 12px;
 }
 html {
     scroll-padding-top: calc(var(--header-height)*var(--nav-height-mul));
@@ -146,21 +147,53 @@ footer {
 }
 
 table {
+    border-collapse: separate;
+    border-spacing: 0;
     order: 1;
     width: 95%;
     margin: auto;
     text-align: center;
-    border-collapse: collapse;  
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    border-radius: 2px;
+    border: 2px solid black;
+    border-radius: var(--table-borders);
     overflow: hidden;
     font-size: 0.85rem;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+table th:first-child {
+    border-top-left-radius: var(--table-borders);
+}
+table th:last-child {
+    border-top-right-radius: var(--table-borders);
+}
+table tr:last-child td:first-child {
+    border-bottom-left-radius: var(--table-borders);
+}
+th:last-child,#border-bottom-right-radius{
+    border-right: none;
+}
+
+table tr:last-child td,
+#border-bottom-right-radius,
+#border-bottom {
+    border-bottom: none;
+}
+th,td {
+    border: none;
+    border-right: 2px solid black; 
+    border-bottom: 2px solid black; 
+}
+
+th {
+    background-color:#56af56;
+    padding: .3rem;   
+}
+#border-bottom-right-radius {
+    border-bottom-right-radius: var(--table-borders);
+}
 th {
     background-color:#56af56;
     padding: .2rem;
-    border: 2px solid black;
 }
 
 td {
@@ -168,7 +201,6 @@ td {
     word-break: break-word;
     padding: 0.2em;
     background-color: #aae2a9;
-    border: 2px solid black;
 }
 
 #table-wrapper {
@@ -247,12 +279,14 @@ tbody tr:nth-child(even) td {
         font-size: calc(var(--footer-height)*.4)
     }
     table {
+        border-collapse: separate;
+        border-spacing: 0;
         max-width: 95%;
         margin: auto;
         text-align: center;
-        border-collapse: collapse;
         font-family: "Montserrat", Arial, Helvetica, sans-serif;
-        border-radius: 2px;
+        border-radius: var(--table-borders);
+        border: 2px solid black;
         overflow: hidden;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
